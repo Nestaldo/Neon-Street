@@ -677,6 +677,10 @@ PrefabInstance:
       propertyPath: rotationForce
       value: 240
       objectReference: {fileID: 0}
+    - target: {fileID: 3459546333480311770, guid: 3ee3ddd265618ba4ab2fd660fb578fb1, type: 3}
+      propertyPath: rotationForceInBack
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8684051480075673998, guid: 3ee3ddd265618ba4ab2fd660fb578fb1, type: 3}
       propertyPath: m_Enabled
       value: 1

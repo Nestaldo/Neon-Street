@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2226962740851046095}
   - component: {fileID: 142528766350950615}
   - component: {fileID: 8773006475821599829}
-  - component: {fileID: 8588481801055058842}
+  - component: {fileID: 8801045200331907065}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Untagged
@@ -101,8 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb6f9c4af348134f8c17396e8bc1fdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &8588481801055058842
-BoxCollider2D:
+  managerScene: {fileID: 0}
+--- !u!60 &8801045200331907065
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,7 +136,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.14041293}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.28866667}
@@ -145,5 +146,9 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.4534464, y: 0.8701556}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.5773587}
+      - {x: -0.5, y: -0.28866667}
+      - {x: 0.5, y: -0.28866667}
+  m_UseDelaunayMesh: 0

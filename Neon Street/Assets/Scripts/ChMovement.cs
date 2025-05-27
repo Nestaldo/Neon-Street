@@ -9,12 +9,15 @@ public class ChMovement : MonoBehaviour
 
     [Header("Rotation Values")]
     [SerializeField] float rotationForce = 2f;
+    [SerializeField] float rotationForceInBack = 2f;
 
     private Rigidbody2D rb;
+    private Quaternion originalRotation;
     bool isJumping = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        originalRotation = transform.rotation ;
     }
 
     void FixedUpdate()
@@ -25,14 +28,23 @@ public class ChMovement : MonoBehaviour
             if (touch.phase == TouchPhase.Began && !isJumping || Input.GetKeyDown(KeyCode.Space))
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+                isJumping = true;
+            }
+            if (touch.phase == TouchPhase.Began|| touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
+            {
+                transform.Rotate(Vector3.forward * rotationForce * Time.deltaTime);
             }
         }
-        if(Input.GetKeyDown(KeyCode.Space))
+        else
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, originalRotation, rotationForceInBack * Time.deltaTime);
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
             isJumping = true;
         }
-        else if (Input.GetKey(KeyCode.Space) && isJumping)
+        if(Input.GetKey(KeyCode.Space) && isJumping)
         {
             transform.Rotate(Vector3.forward * rotationForce * Time.deltaTime);
         }
