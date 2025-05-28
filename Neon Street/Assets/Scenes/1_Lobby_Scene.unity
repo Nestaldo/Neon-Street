@@ -535,8 +535,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7604da24eac6d9f43937cdeb5264b2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 0}
-  volume: 0.5
+  backgroundMusic: {fileID: 8300000, guid: eba1e2bc7e525e04abf8a516d267ca9e, type: 3}
+  volume: 0.15
 --- !u!4 &914540611
 Transform:
   m_ObjectHideFlags: 0
