@@ -11,6 +11,7 @@ public class ManagerScene : MonoBehaviour
     public void LoadLobbyScene()
     {
         SceneManager.LoadScene(0);
+        ScoreManager.Instance.ResetScore();
     }
     public void LoadGameScene()
     {
