@@ -17,7 +17,7 @@ public class ChMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        originalRotation = transform.rotation ;
+        originalRotation = transform.rotation;
     }
 
     void FixedUpdate()
