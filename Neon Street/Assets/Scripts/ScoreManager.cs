@@ -43,6 +43,7 @@ public class ScoreManager : MonoBehaviour
 
         float distance = player.position.x - startX;
         currentScore = (distance * distanceMultiplier) + (timeAlive * timeMultiplier);
+        Debug.Log(currentScore);
 
         if (scoreText != null)
             scoreText.text = "Score: " + Mathf.FloorToInt(currentScore).ToString();
@@ -69,6 +70,28 @@ public class ScoreManager : MonoBehaviour
         if (scene.name == "1_Lobby_Scene")
         {
             ResetScore();
+            isScoring = false;
+        }
+        else if(scene.name == "2_Gameplay_Scene")
+        {
+            ResetScore();
+            isScoring = true;
+            if(player == null)
+            {
+                player = GameObject.FindWithTag("Player").transform;
+            }
+            if(scoreText == null)
+            {
+                scoreText = GameObject.Find("ScoreText")?.GetComponent<TextMeshProUGUI>();
+            }
+            else
+            {
+                Debug.Log(player && scoreText);
+            }
+        }
+        else
+        {
+            isScoring = false;
         }
     }
     private void OnDestroy()
