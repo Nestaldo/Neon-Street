@@ -12,6 +12,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip jumpClip;
     public AudioClip deathClip;
     public AudioClip scoreClip;
+    public AudioClip trickClip;
     [Range(0f, 1f)] public float sfxVolume = 0.7f;
 
     private AudioSource musicSource;
@@ -97,5 +98,9 @@ public class MusicManager : MonoBehaviour
     public void PlayScoreSFX()
     {
         PlaySFX(scoreClip);
+    }
+    public void PlayTrickSFX()
+    {
+        PlaySFX(trickClip);
     }
 }

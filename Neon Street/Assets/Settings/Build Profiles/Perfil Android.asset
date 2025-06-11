@@ -23,7 +23,7 @@ MonoBehaviour:
   - m_enabled: 1
     m_path: Assets/Scenes/1_Lobby_Scene.unity
   - m_enabled: 1
-    m_path: Assets/Scenes/2_Gameplay_Scene.unity
+    m_path: Assets/Scenes/2_Level_1_Scene.unity
   - m_enabled: 1
     m_path: Assets/Scenes/3_Death_Scene.unity
   - m_enabled: 1

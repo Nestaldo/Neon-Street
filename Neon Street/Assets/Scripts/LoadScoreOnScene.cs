@@ -12,5 +12,6 @@ public class LoadScoreOnScene : MonoBehaviour
         int finalScore = ScoreManager.Instance.GetScore();
         scoreText.text = "Final Score : " + finalScore.ToString();
         ScoreManager.Instance.StopScoring();
+        MusicManager.Instance.PlayScoreSFX();
     }
 }

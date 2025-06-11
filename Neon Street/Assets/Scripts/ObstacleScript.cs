@@ -8,6 +8,7 @@ public class ObstacleScript : MonoBehaviour
         if(collision.transform.tag == "Player")
         {
             managerScene.LoadDeathScene();
+            MusicManager.Instance.PlayDeathSFX();
         }
     }
 }
