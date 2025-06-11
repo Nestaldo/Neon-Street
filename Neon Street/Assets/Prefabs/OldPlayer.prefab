@@ -100,10 +100,10 @@ GameObject:
   - component: {fileID: 509552566857149823}
   - component: {fileID: 3459546333480311770}
   - component: {fileID: 451673118363053228}
-  - component: {fileID: 8684051480075673998}
+  - component: {fileID: 1879348224453604249}
   m_Layer: 0
   m_Name: OldPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +168,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
   m_Color: {r: 1, g: 0.7938254, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af7b354c9adfe54c85e7992b3e61859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 1.5
-  rotationForce: 2
+  jumpForce: 6
+  rotationForce: 240
   rotationForceInBack: 2
 --- !u!50 &451673118363053228
 Rigidbody2D:
@@ -221,8 +221,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &8684051480075673998
-BoxCollider2D:
+--- !u!58 &1879348224453604249
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -256,17 +256,7 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.5
 --- !u!1 &4087401045598996217
 GameObject:
   m_ObjectHideFlags: 0

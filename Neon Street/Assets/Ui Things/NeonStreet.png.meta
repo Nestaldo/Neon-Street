@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      NeonStreet_0: -4528074471995153824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
