@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ManagerScene : MonoBehaviour
 {
+    public int lastScene;
     public void ReloadScene()
     {
         int currentScenee = SceneManager.GetActiveScene().buildIndex;
@@ -20,6 +21,7 @@ public class ManagerScene : MonoBehaviour
     public void LoadDeathScene()
     {
         SceneManager.LoadScene(2);
+        lastScene = SceneManager.GetActiveScene().buildIndex;
     }
     public void LoadVictoryScene()
     {
