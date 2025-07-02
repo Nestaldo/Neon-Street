@@ -37,16 +37,49 @@ public class ScoreManager : MonoBehaviour
     }
     void Update()
     {
-        if (!isScoring || player == null) return;
+        if (!isScoring)
+            return;
 
+        // Verificamos si el jugador o el texto se han perdido (null)
+        if (player == null)
+        {
+            GameObject foundPlayer = GameObject.FindWithTag("Player");
+            if (foundPlayer != null)
+            {
+                player = foundPlayer.transform;
+                startX = player.position.x; // Reiniciar origen de puntaje
+            }
+        }
+
+        if (scoreText == null)
+        {
+            GameObject foundText = GameObject.Find("ScoreText");
+            if (foundText != null)
+            {
+                scoreText = foundText.GetComponent<TextMeshProUGUI>();
+            }
+        }
+
+        if (player == null || scoreText == null)
+            return;
+
+        // Lógica de puntaje
         timeAlive += Time.deltaTime;
-
         float distance = player.position.x - startX;
         currentScore = (distance * distanceMultiplier) + (timeAlive * timeMultiplier);
-        Debug.Log(currentScore);
 
-        if (scoreText != null)
-            scoreText.text = "Score: " + Mathf.FloorToInt(currentScore).ToString();
+        scoreText.text = "Score: " + Mathf.FloorToInt(currentScore).ToString();
+
+        //if (!isScoring || player == null) return;
+
+        //timeAlive += Time.deltaTime;
+
+        //float distance = player.position.x - startX;
+        //currentScore = (distance * distanceMultiplier) + (timeAlive * timeMultiplier);
+        //Debug.Log(currentScore);
+
+        //if (scoreText != null)
+        //    scoreText.text = "Score: " + Mathf.FloorToInt(currentScore).ToString();
     }
     public void StopScoring()
     {
