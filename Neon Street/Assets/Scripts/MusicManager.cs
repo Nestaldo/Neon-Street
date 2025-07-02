@@ -4,6 +4,9 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
 
+    //Saving current Scene
+    public int currentSceneSaved;
+
     [Header("Audio Background Settings")]
     public AudioClip backgroundMusic;
     [Range(0f, 1f)] public float musicVolume = 0.5f;
